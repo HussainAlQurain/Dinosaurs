@@ -189,15 +189,15 @@ function addGrids(){
 
     while(dinoFactCount < 3){
         let randomDino = Math.floor(Math.random() * myArray.length);
-            if(dinoFactCount === 0 && dinoDict[myArray[randomDino]] !== "Pigeon"){
+            if(dinoFactCount === 0 && dinoDict[myArray[randomDino]] !== Pigeon){
                 dinoDict[myArray[randomDino]].dietCompare(human.diet);
                 dinoFactCount++;
             }
-            else if(dinoFactCount === 1 && dinoDict[myArray[randomDino]] !== "Pigeon"){
+            else if(dinoFactCount === 1 && dinoDict[myArray[randomDino]] !== Pigeon){
                 dinoDict[myArray[randomDino]].nameCompare(human.name);
                 dinoFactCount++;
             }
-            else if(dinoFactCount === 2 && dinoDict[myArray[randomDino]] !== "Pigeon"){
+            else if(dinoFactCount === 2 && dinoDict[myArray[randomDino]] !== Pigeon){
                 dinoDict[myArray[randomDino]].weightCompare(human.weight);
                 dinoFactCount++;
             }
