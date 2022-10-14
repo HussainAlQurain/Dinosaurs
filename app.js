@@ -172,7 +172,10 @@ function createHumanDiv(){
 
 //add All tiles
 function addGrids(){
+    //for adding grids
     let myArray = Array.from(Array(8).keys());
+    //for comparing
+    let myArray2 = Array.from(Array(8).keys());
     let dinoDict = {};
 
     dinoDict[0] = Triceratops;
@@ -188,19 +191,20 @@ function addGrids(){
     let dinoFactCount = 0;
 
     while(dinoFactCount < 3){
-        let randomDino = Math.floor(Math.random() * myArray.length);
-            if(dinoFactCount === 0 && dinoDict[myArray[randomDino]] !== Pigeon){
-                dinoDict[myArray[randomDino]].dietCompare(human.diet);
+        let randomDino = Math.floor(Math.random() * myArray2.length);
+            if(dinoFactCount === 0 && dinoDict[myArray2[randomDino]] !== Pigeon){
+                dinoDict[myArray2[randomDino]].dietCompare(human.diet);
                 dinoFactCount++;
             }
-            else if(dinoFactCount === 1 && dinoDict[myArray[randomDino]] !== Pigeon){
-                dinoDict[myArray[randomDino]].nameCompare(human.name);
+            else if(dinoFactCount === 1 && dinoDict[myArray2[randomDino]] !== Pigeon){
+                dinoDict[myArray2[randomDino]].nameCompare(human.name);
                 dinoFactCount++;
             }
-            else if(dinoFactCount === 2 && dinoDict[myArray[randomDino]] !== Pigeon){
-                dinoDict[myArray[randomDino]].weightCompare(human.weight);
+            else if(dinoFactCount === 2 && dinoDict[myArray2[randomDino]] !== Pigeon){
+                dinoDict[myArray2[randomDino]].weightCompare(human.weight);
                 dinoFactCount++;
             }
+            myArray2.splice(randomDino,1);
         }
 
     while(count < 9){
