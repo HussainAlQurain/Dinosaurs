@@ -100,7 +100,7 @@ btn.addEventListener("click", (function(){
         let weight = document.getElementById("weight").value;
         let diet = document.getElementById("diet").value;
 
-        if(name && between(feet, 0, 10) && between(inches,0,11) && between(weight,0,1500) && diet){
+        if(name && between(feet, 0, 10) && between(inches,0,11) && between(weight,0,150000) && diet){
             human.name = name;
             human.height = `${feet}\'${inches}\'\'`;
             human.weight = weight;
